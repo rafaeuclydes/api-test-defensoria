@@ -15,7 +15,7 @@ def get_data():
 
     """
     API de busca de preços de tapetes por data
-    ---
+    --- 
     parameters:
       - name: date
         in: query
