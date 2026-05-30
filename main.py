@@ -42,17 +42,17 @@ def get_data():
     
     try:
         data_extapi = requests.get(url_api)
-        resposta = data_extapi.json()
+        response = data_extapi.json()
 
     except Exception as error:
         return jsonify({'Erro': 'Sentimos muito, nossa API esta indisponível no momento', 'detalhes': str(error)}), 503
     
-    resultado_busca = {
+    search_result = {
         'data da busca': date_informed,
-        'dados disponíveis': resposta
+        'dados disponíveis': response
     }
 
-    return jsonify(resultado_busca)
+    return jsonify(search_result)
 
 
 if __name__ == '__main__':
